@@ -82,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
       initialVideoId: _ids.first,
       flags: const YoutubePlayerFlags(
         mute: false,
-        autoPlay: true,
+        autoPlay: false,
         disableDragSeek: false,
         loop: false,
         isLive: false,

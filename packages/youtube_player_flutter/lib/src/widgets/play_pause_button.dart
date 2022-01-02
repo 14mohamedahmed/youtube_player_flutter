@@ -79,18 +79,26 @@ class _PlayPauseButtonState extends State<PlayPauseButton>
         visible: _playerState == PlayerState.cued ||
             !_controller.value.isPlaying ||
             _controller.value.isControlsVisible,
-        child: Material(
-          color: Colors.transparent,
+        child: Container(
+          alignment: Alignment.center,
+          color: const Color(0xFFFCA31B).withOpacity(0.44),
           child: InkWell(
             borderRadius: BorderRadius.circular(50.0),
             onTap: () => _controller.value.isPlaying
                 ? _controller.pause()
                 : _controller.play(),
-            child: AnimatedIcon(
-              icon: AnimatedIcons.play_pause,
-              progress: _animController.view,
-              color: Colors.white,
-              size: 60.0,
+            child: Container(
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                shape: BoxShape.circle,
+              ),
+              padding: const EdgeInsets.all(8),
+              child: AnimatedIcon(
+                icon: AnimatedIcons.play_pause,
+                progress: _animController.view,
+                color: const Color(0xFFFF5A00),
+                size: 40.0,
+              ),
             ),
           ),
         ),
