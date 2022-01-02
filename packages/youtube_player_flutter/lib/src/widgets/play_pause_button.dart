@@ -81,6 +81,7 @@ class _PlayPauseButtonState extends State<PlayPauseButton>
             _controller.value.isControlsVisible,
         child: Container(
           alignment: Alignment.center,
+          margin: const EdgeInsets.all(12),
           color: const Color(0xFFFCA31B).withOpacity(0.44),
           child: InkWell(
             borderRadius: BorderRadius.circular(50.0),
